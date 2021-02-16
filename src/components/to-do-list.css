@@ -1,7 +1,4 @@
 .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100%;
   width: 100%;
   background-color: #fdfbef;
@@ -14,27 +11,30 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: brown;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  height: 40px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .content .header p {
-  font-family: 'Roboto';
   font-size: 40px;
   min-width: 180px;
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .content .header input {
-  height: 50px;
+  height: 40px;
   width: 500px;
-  line-height: 50px;
+  line-height: 40px;
   border: 0;
   border-radius: 10px;
   outline: 0;
@@ -44,7 +44,88 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 18px;
-  font-family: 'Roboto';
-  margin-left: 10px;
+  font-family: none;
+  margin-right: 10px;
+}
+
+.content .header::after {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 10px;
+}
+
+.content .allList {
+  width: 100%;
+  height: calc(100% - 90px);
+}
+
+.content .allList .list {
+  width: 305px;
+  background-color: #d6c7c0;
+  padding: 15px 0;
+  border-radius: 15px;
+}
+
+.content .allList .list .list__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content .allList .list .list__title textarea {
+  width: 235px;
+  height: 30px;
+  outline: 0;
+  font-size: 24px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: none;
+}
+
+.content .allList .list .list__title a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.content .allList .list .list__item .item {
+  height: 34px;
+  width: 100%;
+}
+
+.content .allList .list .list__item .item:hover {
+  border-top: 1px solid #adadad;
+  border-bottom: 1px solid #adadad;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=to-do-list.css.map */

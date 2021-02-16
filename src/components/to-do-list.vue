@@ -4,6 +4,18 @@
       <p>To Do List</p>
       <input type="text" placeholder="新增清單..">
     </div>
+    <div class="allList">
+      <div class="list">
+        <div class="list__title">
+          <textarea rows="15" maxlength="512"></textarea>
+          <a>X</a>
+        </div>
+        <div class="list__item">
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
