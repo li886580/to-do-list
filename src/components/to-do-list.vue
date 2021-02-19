@@ -7,12 +7,15 @@
     <div class="allList">
       <div class="list">
         <div class="list__title">
-          <textarea rows="15" maxlength="512"></textarea>
-          <a>X</a>
+          <textarea class="title__textarea" rows="15" maxlength="512"></textarea>
+          <a class="title__delete">X</a>
         </div>
         <div class="list__item">
-          <div class="item"></div>
-          <div class="item"></div>
+          <div class="item">
+            <a class="item__checkbox"></a>
+            <textarea class="item__textarea" rows="15" maxlength="512"></textarea>
+            <a class="item__delete">X</a>
+          </div>
         </div>
       </div>
     </div>

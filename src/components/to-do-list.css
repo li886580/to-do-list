@@ -101,7 +101,27 @@
   font-family: none;
 }
 
-.content .allList .list .list__title a {
+.content .allList .list .list__title textarea::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__title textarea:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__title textarea::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__title textarea::placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__title textarea:focus, .content .allList .list .list__title textarea:hover {
+  border-bottom: 1px solid #79797993;
+}
+
+.content .allList .list .list__title .title__delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,12 +134,20 @@
   width: 20px;
   height: 20px;
   margin: 5px 5px 0 0;
-  cursor: pointer;
 }
 
 .content .allList .list .list__item .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 34px;
   width: 100%;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .content .allList .list .list__item .item:hover {
@@ -127,5 +155,66 @@
   border-bottom: 1px solid #adadad;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.content .allList .list .list__item .item .item__checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #ff9d9d;
+  margin-right: 17px;
+}
+
+.content .allList .list .list__item .item textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 20px;
+  outline: 0;
+  font-size: 16px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: none;
+}
+
+.content .allList .list .list__item .item textarea::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__item .item textarea:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__item .item textarea::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__item .item textarea::placeholder {
+  color: #a7a7a7;
+}
+
+.content .allList .list .list__item .item textarea:focus, .content .allList .list .list__item .item textarea:hover {
+  border-bottom: 1px solid #79797993;
+}
+
+.content .allList .list .list__item .item .item__delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 17px;
 }
 /*# sourceMappingURL=to-do-list.css.map */
