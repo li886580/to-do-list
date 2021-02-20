@@ -31,21 +31,53 @@
           flex: 1;
 }
 
-.content .header input {
+.content .header .header__newList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 40px;
   width: 500px;
-  line-height: 40px;
-  border: 0;
   border-radius: 10px;
-  outline: 0;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  padding: 0 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.content .header .header__newList input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 40px;
+  border: 0;
+  outline: 0;
   font-size: 18px;
   font-family: none;
-  margin-right: 10px;
+  padding: 0 0 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.content .header .header__newList .plusBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.content .header .header__newList .plusBtn img {
+  height: 16px;
+  width: 16px;
 }
 
 .content .header::after {
