@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <to-do-list/>
+    <to-do-list></to-do-list>
   </div>
 </template>
 

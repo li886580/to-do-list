@@ -10,44 +10,36 @@
       </div>
     </div>
     <div class="allList">
-      <div class="list">
-        <div class="list__title">
-          <textarea class="title__textarea" rows="15" maxlength="512"  placeholder="輸入標題" v-model="listName"></textarea>
-          <a class="title__delete">X</a>
-        </div>
-        <!-- <div class="list__item">
-          <div class="item">
-            <a class="item__checkbox"></a>
-            <textarea class="item__textarea" rows="15" maxlength="512"  placeholder="輸入清單" v-model="itemContent"></textarea>
-            <a class="item__delete">X</a>
-          </div>
-        </div> -->
-      </div>
+      <list></list>
     </div>
   </div>
 </template>
 
 <script>
+import List from './list/list.vue'
+
 let listJson = {
   "listName": "",
   "listColor": "",
-  "item": [
+  "card": [
     {
-      "itemColor": "",
-      "itemContent": "",
-      "itemStatus": ""
+      "cardColor": "",
+      "cardContent": "",
+      "cardStatus": ""
     }
   ]
 }
 
-
 export default {
+  components: {
+    List
+  },
+
   data() {
     return {
       newListName: '',
       listName: '',
-      itemContent: '',
-      itemColor: ''
+      cardContent: '',
     }
   },
   
