@@ -16,15 +16,12 @@
 
 <script>
 export default {
-  props: {
-    listName: this.listJson.listName
-  },
-  // data(){
-  //   return {
-  //     listName: '',
-  //     cardContent: '',
-  //   }
-  // }
+  data(){
+    return {
+      listName: '',
+      cardContent: '',
+    }
+  }
 }
 </script>
 <style src='./list.css'>
