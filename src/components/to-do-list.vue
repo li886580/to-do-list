@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="allList">
-      <list></list>
+      <list v-for="list in lists" :key="list.id">{{list}}</list>
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@
 import List from './list/list.vue'
 
 let listJson = {
+  "id": "",
   "listName": "",
   "listColor": "",
   "card": [
@@ -38,16 +39,16 @@ export default {
   data() {
     return {
       newListName: '',
-      listName: '',
-      cardContent: '',
+      lists:[]
     }
   },
   
   methods: {
     newList() {
       listJson.listName = this.newListName
-      localStorage.setItem('list1', JSON.stringify(listJson))
-      this.newListName = ''
+      this.lists.push(listJson)
+      // localStorage.setItem('list1', JSON.stringify(listJson))
+      // this.newListName = ''
     }
   },
   // created() {
