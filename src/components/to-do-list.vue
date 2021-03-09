@@ -3,33 +3,20 @@
     <div class="header">
       <p>To Do List</p>
       <div class="header__newList">
-        <input type="text" placeholder="新增清單.." v-model="newListName">
+        <input type="text" placeholder="新增清單.." v-model="newListName" />
         <a class="plusBtn" @click="newList()">
-          <img src="../assets/icon/plus.svg"/>
+          <img src="../assets/icon/plus.svg" />
         </a>
       </div>
     </div>
-    <div class="allList">
-      <list v-for="list in lists" :key="list.id">{{list}}</list>
+    <div class="allList">{{lists}}
+      <list v-for="list in lists" :key="list.id" :lists.sync="lists"></list>
     </div>
   </div>
 </template>
 
 <script>
-import List from './list/list.vue'
-
-let listJson = {
-  "id": "",
-  "listName": "",
-  "listColor": "",
-  "card": [
-    {
-      "cardColor": "",
-      "cardContent": "",
-      "cardStatus": ""
-    }
-  ]
-}
+import List from "./list/list.vue";
 
 export default {
   components: {
@@ -38,26 +25,39 @@ export default {
 
   data() {
     return {
-      newListName: '',
-      lists:[]
-    }
+      id: 0,
+      newListName: "",
+      lists: []
+    };
   },
-  
+
   methods: {
     newList() {
-      listJson.listName = this.newListName
-      this.lists.push(listJson)
-      // localStorage.setItem('list1', JSON.stringify(listJson))
+      let listData = {
+        id: "",
+        listName: "",
+        listColor: "",
+        card: [
+          {
+            cardColor: "",
+            cardContent: "",
+            cardStatus: ""
+          },
+        ],
+      };
+      listData.listName = this.newListName
+      this.id += 1
+      listData.id = this.id
+      this.lists.push(listData);
+      // console.log(this.lists)
+      // localStorage.setItem('list1', JSON.stringify(listData))
       // this.newListName = ''
-    }
+    },
   },
   // created() {
   //   this.listName = JSON.parse(localStorage.getItem('list1')).listName
   // }
-}
-
-
-
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

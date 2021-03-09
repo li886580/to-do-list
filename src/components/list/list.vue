@@ -1,7 +1,7 @@
 <template>
-  <div class="list">
+  <div class="list">{{lists}}
     <div class="list__title">
-      <textarea class="title__textarea" rows="15" maxlength="512"  placeholder="輸入標題" v-model="listName"></textarea>
+      <textarea class="title__textarea" rows="15" maxlength="512"  placeholder="輸入標題" v-model="textareaText"></textarea>
       <a class="title__delete">X</a>
     </div>
     <div class="list__card">
@@ -18,8 +18,25 @@
 export default {
   data(){
     return {
-      listName: '',
-      cardContent: '',
+      // listName: '',
+      // cardContent: '',
+    }
+  },
+  props: {
+    lists: {
+      type: Array,
+      required:true
+    }
+  },
+  computed: {
+    textareaText: {
+      get(){
+        // JSON.stringify(this.lists)
+        return this.lists[0].listName
+      },
+      set(val){
+        this.$emit('update:lists',val)
+      }
     }
   }
 }
