@@ -9,8 +9,8 @@
         </a>
       </div>
     </div>
-    <div class="allList">{{lists}}
-      <list v-for="list in lists" :key="list.id" :lists.sync="lists"></list>
+    <div class="allList">
+      <list v-for="list in lists" :key="list.id" :list="list"></list>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 
   data() {
     return {
-      id: 0,
+      listId: 0,
       newListName: "",
       lists: []
     };
@@ -37,17 +37,10 @@ export default {
         id: "",
         listName: "",
         listColor: "",
-        card: [
-          {
-            cardColor: "",
-            cardContent: "",
-            cardStatus: ""
-          },
-        ],
       };
       listData.listName = this.newListName
-      this.id += 1
-      listData.id = this.id
+      this.listId += 1
+      listData.id = this.listId
       this.lists.push(listData);
       // console.log(this.lists)
       // localStorage.setItem('list1', JSON.stringify(listData))

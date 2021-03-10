@@ -2,7 +2,9 @@
   width: 305px;
   background-color: #d6c7c0;
   padding: 15px 0;
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: auto;
 }
 
 .list .list__title {
@@ -153,5 +155,31 @@
   width: 20px;
   height: 20px;
   margin-left: 17px;
+}
+
+.list .list__card .plusBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  border-radius: 5px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list .list__card .plusBtn:hover {
+  background-color: rgba(124, 124, 124, 0.151);
+}
+
+.list .list__card .plusBtn img {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=list.css.map */

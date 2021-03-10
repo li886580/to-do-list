@@ -58,8 +58,10 @@
     }
   }
   .allList{
-    // background-color: chocolate;
+    display: flex;
     width: 100%;
-    height: calc(100% - 90px);
+    max-height: calc(100% - 90px);
+    overflow-x: scroll;
+    
   }
 }

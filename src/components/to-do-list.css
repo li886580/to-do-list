@@ -89,7 +89,11 @@
 }
 
 .content .allList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  height: calc(100% - 90px);
+  max-height: calc(100% - 90px);
+  overflow-x: scroll;
 }
 /*# sourceMappingURL=to-do-list.css.map */

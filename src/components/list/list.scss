@@ -1,9 +1,12 @@
 .list{
-  // display: flex;
   width: 305px;
   background-color: #d6c7c0;
   padding: 15px 0;
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: auto;
+  // overflow-y: scroll;
+  // box-sizing: content-box;
   .list__title{
     width: 100%;
     display: flex;
@@ -44,6 +47,8 @@
     }
   }
   .list__card{
+    // display: flex;
+    // flex-flow: column;
     .card{
       display: flex;
       align-items: center;
@@ -91,6 +96,25 @@
         width: 20px;
         height: 20px;
         margin-left: 17px;
+      }
+    }
+    .plusBtn{
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      height: 30px;
+      width: calc(100% - 20px);
+      margin: 0 10px;
+      border-radius: 5px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      &:hover{
+        background-color: rgba(124, 124, 124, 0.151);
+      }
+      img{
+        height: 16px;
+        width: 16px;
+        margin-right: 10px;
       }
     }
   }
