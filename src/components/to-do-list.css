@@ -71,8 +71,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.content .header .header__newList .plusBtn:hover {
+  background-color: rgba(128, 128, 128, 0.137);
+  border-radius: 20px;
+}
+
+.content .header .header__newList .plusBtn:active {
+  background-color: rgba(128, 128, 128, 0.445);
+  border-radius: 20px;
 }
 
 .content .header .header__newList .plusBtn img {

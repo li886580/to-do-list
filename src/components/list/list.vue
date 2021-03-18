@@ -5,7 +5,7 @@
       <a class="title__delete">X</a>
     </div>
     <div class="list__card">
-      <div class="card" v-for="card in cards" :key="card.id" v-show="card.cardStatus">{{card}}
+      <div class="card" v-for="card in cards" :key="card.id" v-show="card.cardStatus">
         <a class="card__checkbox"></a>
         <textarea class="card__textarea" rows="15" maxlength="512"  placeholder="輸入內容" v-model="card.cardContent"></textarea>
         <a class="card__delete" @click="card.cardStatus = !card.cardStatus">X</a>
