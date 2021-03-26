@@ -23,6 +23,7 @@
 }
 
 .content .header p {
+  font-family: 'chinson';
   font-size: 40px;
   min-width: 180px;
   margin-right: 10px;
@@ -54,7 +55,7 @@
   border: 0;
   outline: 0;
   font-size: 18px;
-  font-family: none;
+  font-family: 'chinson';
   padding: 0 0 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

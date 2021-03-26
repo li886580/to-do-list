@@ -17,6 +17,7 @@ export default {
 
 <style>
 @import './assets/css/vendors/CSS Reset.css';
+@import './common/font/font.css';
 html, body {
   height: 100%;
 }
