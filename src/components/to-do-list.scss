@@ -15,7 +15,7 @@
     p{
       font-family: 'chinson';
       font-size: 40px;
-      min-width: 180px;
+      min-width: 200px;
       margin-right: 10px;
       flex: 1;
       // height: 40px;
@@ -69,8 +69,9 @@
   .allList{
     display: flex;
     width: 100%;
-    max-height: calc(100% - 90px);
+    border: 1px solid black;
+    height: calc(100% - 90px);
     overflow-x: scroll;
-    
+    // overflow-y: unset;
   }
 }

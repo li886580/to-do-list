@@ -1,11 +1,13 @@
 .list{
   width: 305px;
+  min-width: 305px;
   background-color: #d6c7c0;
   padding: 15px 0;
   border-radius: 10px;
   margin-right: 20px;
-  height: auto;
+  height: fit-content;
   // overflow-y: scroll;
+  max-height: inherit;
   // box-sizing: content-box;
   .list__title{
     width: 100%;
@@ -24,10 +26,9 @@
       border: 0;
       background-color: rgba(0, 0, 0, 0);
       resize: none;
-      // overflow: hidden;
+      overflow: hidden;
       // overflow-wrap: break-word;
-      // overflow-y: visible;
-      overflow: auto;
+      // overflow-y: visible
 
       padding: 0 5px;
       box-sizing: border-box;
@@ -47,6 +48,10 @@
       height: 20px;
       // background-color: khaki;
       margin: 5px 5px 0 0;
+      img{
+        width: 14px;
+        height: 14px;
+      }
     }
   }
   .list__card{
@@ -110,6 +115,10 @@
         width: 20px;
         height: 20px;
         margin-left: 17px;
+        img{
+          width: 14px;
+          height: 14px;
+        }  
       }
     }
     .plusBtn{

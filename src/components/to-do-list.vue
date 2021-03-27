@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="allList">
-      <list v-for="list in lists" :key="list.id" :list="list"></list>
+      <list v-for="list in lists" :key="list.id" :list="list" v-show="list.listStatus"></list>
     </div>
   </div>
 </template>
@@ -36,6 +36,7 @@ export default {
       if(this.newListName.replace(/^\s*|\s*$/g,"") !== ""){
         let listData = {
           id: "",
+          listStatus: true,
           listName: "",
           listColor: "",
         };
@@ -58,5 +59,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src='./to-do-list.css'>
+<style src='./to-do-list.css' scoped>
 </style>
