@@ -61,6 +61,6 @@ export default {
 }
 
 </script>
-<style src='./list.css' scoped>
+<style src='./list.css'>
 
 </style>

@@ -1,4 +1,11 @@
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 100%;
   width: 100%;
   background-color: #fdfbef;
@@ -62,6 +69,22 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
+.content .header .header__newList input::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .header .header__newList input:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .header .header__newList input::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.content .header .header__newList input::placeholder {
+  color: #a7a7a7;
+}
+
 .content .header .header__newList .plusBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,21 +98,24 @@
   height: 30px;
   width: 30px;
   margin-right: 10px;
+  border-radius: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .content .header .header__newList .plusBtn:hover {
-  background-color: rgba(128, 128, 128, 0.137);
-  border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.192);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .content .header .header__newList .plusBtn:active {
   background-color: rgba(128, 128, 128, 0.445);
-  border-radius: 20px;
 }
 
 .content .header .header__newList .plusBtn img {
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
 }
 
 .content .header::after {
@@ -101,12 +127,10 @@
 }
 
 .content .allList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   border: 1px solid black;
-  height: calc(100% - 90px);
-  overflow-x: scroll;
 }
 /*# sourceMappingURL=to-do-list.css.map */

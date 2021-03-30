@@ -1,14 +1,14 @@
 .list {
+  display: inline-block;
+  vertical-align: top;
   width: 305px;
   min-width: 305px;
   background-color: #d6c7c0;
   padding: 15px 0;
   border-radius: 10px;
   margin-right: 20px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-height: inherit;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .list .list__title {
@@ -59,7 +59,11 @@
   color: #a7a7a7;
 }
 
-.list .list__title textarea:focus, .list .list__title textarea:hover {
+.list .list__title textarea:hover {
+  border-bottom: 1px solid #79797993;
+}
+
+.list .list__title textarea:focus {
   border-bottom: 1px solid #79797993;
 }
 
@@ -81,6 +85,11 @@
 .list .list__title .title__delete img {
   width: 14px;
   height: 14px;
+}
+
+.list .list__card {
+  max-height: 100%;
+  overflow: auto;
 }
 
 .list .list__card .card {
@@ -115,9 +124,9 @@
   display: block;
   width: 14px;
   height: 14px;
-  border-radius: 6px;
+  border-radius: 7px;
   background-color: #ff9d9d;
-  margin: 2px 0 0 2px;
+  margin: 1px 0 0 1px;
 }
 
 .list .list__card .card .card__checkbox i .checkIcn {
@@ -129,10 +138,11 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 20px;
+  height: 24px;
   outline: 0;
   font-size: 16px;
   border: 0;
+  border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
   resize: none;
   overflow: hidden;
@@ -141,6 +151,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'chinson';
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .list .list__card .card textarea::-webkit-input-placeholder {
@@ -159,8 +171,17 @@
   color: #a7a7a7;
 }
 
-.list .list__card .card textarea:focus, .list .list__card .card textarea:hover {
+.list .list__card .card textarea:hover {
   border-bottom: 1px solid #79797993;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
+
+.list .list__card .card textarea:focus {
+  border-bottom: 0;
+  background-color: azure;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .list .list__card .card .card__delete {
@@ -179,8 +200,8 @@
 }
 
 .list .list__card .card .card__delete img {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .list .list__card .plusBtn {
@@ -197,10 +218,18 @@
   padding-left: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .list .list__card .plusBtn:hover {
-  background-color: rgba(124, 124, 124, 0.151);
+  background-color: rgba(124, 124, 124, 0.192);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.list .list__card .plusBtn:active {
+  background-color: rgba(128, 128, 128, 0.445);
 }
 
 .list .list__card .plusBtn img {

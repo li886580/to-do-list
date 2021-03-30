@@ -1,14 +1,15 @@
 .list{
+  display: inline-block;
+  vertical-align: top;
   width: 305px;
   min-width: 305px;
   background-color: #d6c7c0;
   padding: 15px 0;
   border-radius: 10px;
   margin-right: 20px;
-  height: fit-content;
-  // overflow-y: scroll;
-  max-height: inherit;
-  // box-sizing: content-box;
+  max-height: 100%;
+  // height: 500px;
+  overflow: hidden;
   .list__title{
     width: 100%;
     display: flex;
@@ -29,14 +30,16 @@
       overflow: hidden;
       // overflow-wrap: break-word;
       // overflow-y: visible
-
       padding: 0 5px;
       box-sizing: border-box;
       font-family: 'chinson';
       &::placeholder{
         color: rgb(167, 167, 167);
       }
-      &:focus, &:hover{
+      &:hover{
+        border-bottom: 1px solid #79797993;
+      }
+      &:focus{
         border-bottom: 1px solid #79797993;
       }
     }
@@ -55,8 +58,9 @@
     }
   }
   .list__card{
-    // display: flex;
-    // flex-flow: column;
+    max-height: 100%;
+    // max-width: 100px;
+    overflow: auto;
     .card{
       display: flex;
       align-items: center;
@@ -78,9 +82,9 @@
           display: block;
           width: 14px;
           height: 14px;
-          border-radius: 6px;
+          border-radius: 7px;
           background-color: #ff9d9d;
-          margin: 2px 0 0 2px;
+          margin: 1px 0 0 1px;
           .checkIcn{
             width: 16px;
             height: 16px;
@@ -89,11 +93,12 @@
       }
       textarea{
         flex: 1;
-        height: 20px;
+        height: 24px;
         outline: 0;
         font-size: 16px;
         // margin-left: 60px;
         border: 0;
+        border-radius: 3px;
         background-color: rgba(0, 0, 0, 0);
         resize: none;
         overflow: hidden;
@@ -101,11 +106,18 @@
         padding: 0 5px;
         box-sizing: border-box;
         font-family: 'chinson';
+        transition: all 0.3s;
         &::placeholder{
           color: rgb(167, 167, 167);
         }
-        &:focus, &:hover{
+        &:hover{
           border-bottom: 1px solid #79797993;
+          transition: all 0s;
+        }
+        &:focus{
+          border-bottom: 0;
+          background-color: azure;
+          transition: all 0.3s;
         }
       }
       .card__delete{
@@ -116,8 +128,8 @@
         height: 20px;
         margin-left: 17px;
         img{
-          width: 14px;
-          height: 14px;
+          width: 12px;
+          height: 12px;
         }  
       }
     }
@@ -131,8 +143,13 @@
       border-radius: 5px;
       padding-left: 10px;
       box-sizing: border-box;
+      transition: all 0.5s;
       &:hover{
-        background-color: rgba(124, 124, 124, 0.151);
+        background-color: rgba(124, 124, 124, 0.192);
+        transition: all 0.5s;
+      }
+      &:active{
+        background-color: rgba(128, 128, 128, 0.445);
       }
       img{
         height: 16px;
