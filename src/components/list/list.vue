@@ -18,11 +18,12 @@
           <img src="../../assets/icon/cancel.svg">
         </a>
       </div>
-      <a class="plusBtn" @click="newCard">
-        <img class="plusIcn" src="../../assets/icon/plus.svg">
-        <p>新增卡片</p>
-      </a>
     </div>
+    <a class="plusBtn" @click="newCard">
+      <img class="plusIcn" src="../../assets/icon/plus.svg">
+      <p>新增卡片</p>
+    </a>
+
   </div>
 </template>
 

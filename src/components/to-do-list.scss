@@ -6,6 +6,7 @@
   background-color: #fdfbef;
   padding: 20px;
   box-sizing: border-box;
+  // overflow: hidden;
   .header{
     display: flex;
     justify-content: space-between;
@@ -73,12 +74,9 @@
     }
   }
   .allList{
-    // display: flex;
-    flex: 1;
+    display: flex;
+    height: calc(100% - 90px);
     width: 100%;
     border: 1px solid black;
-    // overflow-y: auto;
-    // overflow-x: scroll;
-    // overflow-y: unset;
   }
 }

@@ -1,14 +1,23 @@
 .list {
-  display: inline-block;
-  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   width: 305px;
   min-width: 305px;
-  background-color: #d6c7c0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 100%;
   padding: 15px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 10px;
   margin-right: 20px;
-  max-height: 100%;
-  overflow: hidden;
+  background-color: #d6c7c0;
 }
 
 .list .list__title {
@@ -88,8 +97,7 @@
 }
 
 .list .list__card {
-  max-height: 100%;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .list .list__card .card {
@@ -204,14 +212,14 @@
   height: 12px;
 }
 
-.list .list__card .plusBtn {
+.list .plusBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30px;
+  min-height: 30px;
   width: calc(100% - 20px);
   margin: 0 10px;
   border-radius: 5px;
@@ -222,17 +230,17 @@
   transition: all 0.5s;
 }
 
-.list .list__card .plusBtn:hover {
+.list .plusBtn:hover {
   background-color: rgba(124, 124, 124, 0.192);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.list .list__card .plusBtn:active {
+.list .plusBtn:active {
   background-color: rgba(128, 128, 128, 0.445);
 }
 
-.list .list__card .plusBtn img {
+.list .plusBtn img {
   height: 16px;
   width: 16px;
   margin-right: 10px;
