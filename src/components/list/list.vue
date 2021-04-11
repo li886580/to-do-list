@@ -13,7 +13,7 @@
             <img class="checkIcn" src="../../assets/icon/check.svg" v-show="card.cardFinish">
           </i>
         </a>
-        <textarea class="card__textarea" rows="15" maxlength="512" placeholder="輸入內容" v-model="card.cardContent"></textarea>
+        <textarea class="card__textarea" v-bind:class="{card__textarea_finish: card.cardFinish}" rows="15" maxlength="512" placeholder="輸入內容" v-model="card.cardContent"></textarea>
         <a class="card__delete" @click="card.cardStatus = !card.cardStatus">
           <img src="../../assets/icon/cancel.svg">
         </a>
@@ -23,7 +23,6 @@
       <img class="plusIcn" src="../../assets/icon/plus.svg">
       <p>新增卡片</p>
     </a>
-
   </div>
 </template>
 

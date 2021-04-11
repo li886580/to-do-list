@@ -1,7 +1,5 @@
 
 .list{
-  // display: inline-block;
-  // vertical-align: top;
   display: flex;
   flex-flow: column;
   width: 305px;
@@ -36,14 +34,19 @@
       padding: 0 5px;
       box-sizing: border-box;
       font-family: 'chinson';
+      border-radius: 5px;
+      border-bottom: 1px solid #ffffff00;
       &::placeholder{
         color: rgb(167, 167, 167);
       }
       &:hover{
         border-bottom: 1px solid #79797993;
+        transition: all 0s;
       }
       &:focus{
-        border-bottom: 1px solid #79797993;
+        border-bottom: 1px solid #ffffff00;
+        background-color: azure;
+        transition: all 0.3s;
       }
     }
     .title__delete{
@@ -93,7 +96,7 @@
           }
         }
       }
-      textarea{
+      .card__textarea{
         flex: 1;
         height: 24px;
         outline: 0;
@@ -121,6 +124,9 @@
           background-color: azure;
           transition: all 0.3s;
         }
+      }
+      .card__textarea_finish{
+        text-decoration: line-through;
       }
       .card__delete{
         display: flex;
@@ -160,3 +166,14 @@
     }
   }
 }
+
+::-webkit-scrollbar{ //整个滚动条
+  width: 12px;
+}
+::-webkit-scrollbar-thumb{
+  background: #adadad75;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track{
+  background: #a7a7a72d;
+} //滚动条轨道.

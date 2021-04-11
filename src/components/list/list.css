@@ -50,6 +50,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'chinson';
+  border-radius: 5px;
+  border-bottom: 1px solid #ffffff00;
 }
 
 .list .list__title textarea::-webkit-input-placeholder {
@@ -70,10 +72,15 @@
 
 .list .list__title textarea:hover {
   border-bottom: 1px solid #79797993;
+  -webkit-transition: all 0s;
+  transition: all 0s;
 }
 
 .list .list__title textarea:focus {
-  border-bottom: 1px solid #79797993;
+  border-bottom: 1px solid #ffffff00;
+  background-color: azure;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .list .list__title .title__delete {
@@ -142,7 +149,7 @@
   height: 16px;
 }
 
-.list .list__card .card textarea {
+.list .list__card .card .card__textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -163,33 +170,37 @@
   transition: all 0.3s;
 }
 
-.list .list__card .card textarea::-webkit-input-placeholder {
+.list .list__card .card .card__textarea::-webkit-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card textarea:-ms-input-placeholder {
+.list .list__card .card .card__textarea:-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card textarea::-ms-input-placeholder {
+.list .list__card .card .card__textarea::-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card textarea::placeholder {
+.list .list__card .card .card__textarea::placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card textarea:hover {
+.list .list__card .card .card__textarea:hover {
   border-bottom: 1px solid #79797993;
   -webkit-transition: all 0s;
   transition: all 0s;
 }
 
-.list .list__card .card textarea:focus {
+.list .list__card .card .card__textarea:focus {
   border-bottom: 0;
   background-color: azure;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.list .list__card .card .card__textarea_finish {
+  text-decoration: line-through;
 }
 
 .list .list__card .card .card__delete {
@@ -244,5 +255,18 @@
   height: 16px;
   width: 16px;
   margin-right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #adadad75;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a7a7a72d;
 }
 /*# sourceMappingURL=list.css.map */

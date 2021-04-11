@@ -132,6 +132,20 @@
   display: flex;
   height: calc(100% - 90px);
   width: 100%;
-  border: 1px solid black;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #adadad75;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a7a7a72d;
 }
 /*# sourceMappingURL=to-do-list.css.map */
