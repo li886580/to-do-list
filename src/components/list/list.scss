@@ -10,27 +10,62 @@
   box-sizing: border-box;
   border-radius: 10px;
   margin-right: 20px;
-  background-color: #d6c7c0;
   .list__title{
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 20px 0 5px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    textarea{
-      width: 100%;
-      height: 100%;
+    .more{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      .colorSelect{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 68px;
+        height: 40px;
+        background-color: white;
+        border-radius: 6px;
+        position: absolute;
+        padding: 0 4px;
+        box-sizing: border-box;
+        top: 40px;
+        left: 0;
+        .color{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          .color__style{
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+          }
+        }
+      }
+      img{
+        width: 14px;
+        height: 14px;
+      }
+    }
+    input{
+      flex: 1;
+      height: 30px;
       outline: 0;
       font-size: 24px;
-      // margin-left: 60px;
       border: 0;
       background-color: rgba(0, 0, 0, 0);
       resize: none;
       overflow: hidden;
-      // overflow-wrap: break-word;
-      // overflow-y: visible
       padding: 0 5px;
       box-sizing: border-box;
       font-family: 'chinson';
@@ -53,10 +88,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 20px;
-      height: 20px;
-      // background-color: khaki;
-      margin: 5px 5px 0 0;
+      width: 30px;
+      height: 30px;
       img{
         width: 14px;
         height: 14px;
@@ -64,8 +97,9 @@
     }
   }
   .list__card{
-    // max-height: calc(100% - 400px);
-    overflow-y: auto;
+    padding-right: 10px;
+    box-sizing: border-box;
+    overflow-y: overlay;
     .card{
       display: flex;
       align-items: center;
@@ -79,29 +113,32 @@
         box-sizing: border-box;
       }
       .card__checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 16px;
         height: 16px;
         margin-right: 10px;
         border-radius: 8px;
         i{
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           width: 14px;
           height: 14px;
           border-radius: 7px;
-          background-color: #ff9d9d;
-          margin: 1px 0 0 1px;
+          background-color: rgba(255, 255, 255, 0.705);
           .checkIcn{
             width: 16px;
             height: 16px;
           }
         }
       }
-      .card__textarea{
+      input{
         flex: 1;
         height: 24px;
         outline: 0;
         font-size: 16px;
-        // margin-left: 60px;
         border: 0;
         border-radius: 3px;
         background-color: rgba(0, 0, 0, 0);
@@ -116,11 +153,12 @@
           color: rgb(167, 167, 167);
         }
         &:hover{
-          border-bottom: 1px solid #79797993;
+          // border-bottom: 1px solid #79797993;
+          // box-sizing: border-box;
           transition: all 0s;
         }
         &:focus{
-          border-bottom: 0;
+          // border-bottom: 0;
           background-color: azure;
           transition: all 0.3s;
         }
@@ -174,6 +212,7 @@
   background: #adadad75;
   border-radius: 6px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track{ //滚动条轨道.
   background: #a7a7a72d;
-} //滚动条轨道.
+  border-radius: 6px;
+}

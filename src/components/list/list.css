@@ -17,7 +17,6 @@
           box-sizing: border-box;
   border-radius: 10px;
   margin-right: 20px;
-  background-color: #d6c7c0;
 }
 
 .list .list__title {
@@ -31,15 +30,81 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 20px 0 5px;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.list .list__title textarea {
-  width: 100%;
-  height: 100%;
+.list .list__title .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.list .list__title .more .colorSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 68px;
+  height: 40px;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  padding: 0 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 40px;
+  left: 0;
+}
+
+.list .list__title .more .colorSelect .color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.list .list__title .more .colorSelect .color .color__style {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.list .list__title .more img {
+  width: 14px;
+  height: 14px;
+}
+
+.list .list__title input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 30px;
   outline: 0;
   font-size: 24px;
   border: 0;
@@ -54,29 +119,29 @@
   border-bottom: 1px solid #ffffff00;
 }
 
-.list .list__title textarea::-webkit-input-placeholder {
+.list .list__title input::-webkit-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__title textarea:-ms-input-placeholder {
+.list .list__title input:-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__title textarea::-ms-input-placeholder {
+.list .list__title input::-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__title textarea::placeholder {
+.list .list__title input::placeholder {
   color: #a7a7a7;
 }
 
-.list .list__title textarea:hover {
+.list .list__title input:hover {
   border-bottom: 1px solid #79797993;
   -webkit-transition: all 0s;
   transition: all 0s;
 }
 
-.list .list__title textarea:focus {
+.list .list__title input:focus {
   border-bottom: 1px solid #ffffff00;
   background-color: azure;
   -webkit-transition: all 0.3s;
@@ -93,9 +158,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin: 5px 5px 0 0;
+  width: 30px;
+  height: 30px;
 }
 
 .list .list__title .title__delete img {
@@ -104,7 +168,10 @@
 }
 
 .list .list__card {
-  overflow-y: auto;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: overlay;
 }
 
 .list .list__card .card {
@@ -129,6 +196,15 @@
 }
 
 .list .list__card .card .card__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 16px;
   height: 16px;
   margin-right: 10px;
@@ -136,12 +212,19 @@
 }
 
 .list .list__card .card .card__checkbox i {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 14px;
   height: 14px;
   border-radius: 7px;
-  background-color: #ff9d9d;
-  margin: 1px 0 0 1px;
+  background-color: rgba(255, 255, 255, 0.705);
 }
 
 .list .list__card .card .card__checkbox i .checkIcn {
@@ -149,7 +232,7 @@
   height: 16px;
 }
 
-.list .list__card .card .card__textarea {
+.list .list__card .card input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -170,30 +253,28 @@
   transition: all 0.3s;
 }
 
-.list .list__card .card .card__textarea::-webkit-input-placeholder {
+.list .list__card .card input::-webkit-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card .card__textarea:-ms-input-placeholder {
+.list .list__card .card input:-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card .card__textarea::-ms-input-placeholder {
+.list .list__card .card input::-ms-input-placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card .card__textarea::placeholder {
+.list .list__card .card input::placeholder {
   color: #a7a7a7;
 }
 
-.list .list__card .card .card__textarea:hover {
-  border-bottom: 1px solid #79797993;
+.list .list__card .card input:hover {
   -webkit-transition: all 0s;
   transition: all 0s;
 }
 
-.list .list__card .card .card__textarea:focus {
-  border-bottom: 0;
+.list .list__card .card input:focus {
   background-color: azure;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -268,5 +349,6 @@
 
 ::-webkit-scrollbar-track {
   background: #a7a7a72d;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=list.css.map */

@@ -38,7 +38,8 @@ export default {
           id: "",
           listStatus: true,
           listName: "",
-          listColor: "",
+          listColor: "background-color: rgb(182 215 249)",
+          isSelectColor: false
         };
         listData.listName = this.newListName
         this.listId += 1
@@ -46,18 +47,10 @@ export default {
         this.lists.push(listData);
         this.newListName = ""
       }
-      
-      // console.log(this.lists)
-      // localStorage.setItem('list1', JSON.stringify(listData))
-      // this.newListName = ''
     },
   },
-  // created() {
-  //   this.listName = JSON.parse(localStorage.getItem('list1')).listName
-  // }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style src='./to-do-list.css' scoped>
 </style>
