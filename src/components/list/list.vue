@@ -9,7 +9,7 @@
         </div>
         <img src="../../assets/icon/more.svg">
       </a>
-      <input class="title__textarea" placeholder="輸入標題" v-model="list.listName" :style="{'height': list.listHeight}">
+      <input class="title__textarea" placeholder="輸入標題" v-model="list.listName">
       <a class="title__delete" @click="list.listStatus = !list.listStatus">
         <img src="../../assets/icon/cancel.svg">
       </a>
@@ -21,13 +21,13 @@
             <img class="checkIcn" src="../../assets/icon/check.svg" v-show="card.cardFinish">
           </i>
         </a>
-        <input class="card__textarea" v-bind:class="{card__textarea_finish: card.cardFinish}" placeholder="輸入內容" v-model="card.cardContent" :style="{'height': card.cardHeight}">
+        <input class="card__textarea" v-bind:class="{card__textarea_finish: card.cardFinish}" placeholder="輸入內容" v-model="card.cardContent">
         <a class="card__delete" @click="card.cardStatus = !card.cardStatus">
           <img src="../../assets/icon/cancel.svg">
         </a>
       </div>
     </div>
-    <a class="plusBtn" @click="newCard">
+    <a class="plusBtn" @click="newCard()">
       <img class="plusIcn" src="../../assets/icon/plus.svg">
       <p>新增卡片</p>
     </a>
